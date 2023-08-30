@@ -7,6 +7,7 @@ converte_string(string){
   int string_convertida = int.parse(string ?? 0);
   return string_convertida;
 }
+
 void main(){
   print("Digite o seu nome:");
   String? nome = stdin.readLineSync();
@@ -18,6 +19,5 @@ void main(){
   print("A string trocada ${string_trocada} do  tipo ${tipo_string_trocada}");
 
   // Calculadora:
- 
-  
+
 }
