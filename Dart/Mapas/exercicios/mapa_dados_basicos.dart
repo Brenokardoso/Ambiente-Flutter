@@ -10,6 +10,7 @@ void main(){
 
   for(var keys in produtos.keys){
     print("$keys : ${produtos[keys]}");
+    
   }
 
   
