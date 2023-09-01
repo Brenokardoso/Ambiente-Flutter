@@ -1,6 +1,8 @@
 // Caracteristicas
 // Comportamentos
 
+// ignore_for_file: non_constant_identifier_names
+
 class Camisa {
   String? tamanho;
   String? cor;
