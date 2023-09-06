@@ -1,23 +1,38 @@
-Listas e Mapas:
-    (Médio) Crie uma função que receba uma lista de palavras e retorne a palavra mais longa da lista.
-    (Médio) Implemente um programa que leia um arquivo de texto e conte a frequência de cada palavra no texto usando um dicionário.
-    (Médio) Desenvolva um programa que simule um jogo de tabuleiro onde os jogadores podem mover suas peças em um tabuleiro representado por uma lista multidimensional.
-    (Difícil) Crie uma função que receba uma lista de números e retorne uma nova lista com os números ordenados de forma decrescente.
-    (Difícil) Implemente um sistema de gerenciamento de contatos que permita adicionar, editar, excluir e listar contatos usando um dicionário como estrutura de dados.
-    (Difícil) Desenvolva um programa que simule um sistema de reserva de assentos em um teatro usando uma matriz para representar o layout dos assentos.
+Classes e Construtores:
 
-Funções:
-    (Médio) Escreva uma função que calcule o fatorial de um número usando recursão.
-    (Médio) Crie um programa que simule uma calculadora com funções para adição, subtração, multiplicação e divisão.
-    (Médio) Implemente um sistema de gerenciamento de tarefas com funções para adicionar, listar, marcar como concluída e excluir tarefas.
-    (Difícil) Desenvolva uma calculadora científica em que as funções matemáticas avançadas, como trigonometria e logaritmos, sejam implementadas como funções separadas.
-    (Difícil) Crie uma função que receba uma lista de números e retorne o desvio padrão da lista.
-    (Difícil) Implemente um programa que simule um sistema de registro de transações financeiras com funções para registrar depósitos, saques e verificar o saldo.
+Inicializadores:
 
-Classes e Objetos:
-    (Médio) Defina uma classe "Carro" com atributos como marca, modelo e ano. Crie objetos de carros diferentes e exiba suas informações.
-    (Médio) Crie uma classe "Conta Bancária" com métodos para depositar, sacar e verificar o saldo. Permita que os usuários criem contas e realizem operações.
-    (Médio) Desenvolva um programa que simule um sistema de registro de alunos usando classes para representar alunos, cursos e notas.
-    (Difícil) Implemente um sistema de gerenciamento de estoque de uma loja com classes para representar produtos, categorias e operações de compra e venda.
-    (Difícil) Crie um jogo de simulação de vida com classes para representar diferentes seres vivos, seu comportamento e interações em um ambiente virtual.
-    (Difícil) Desenvolva um sistema de reserva de passagens aéreas com classes para representar voos, assentos e reservas de passageiros.
+   
+    
+
+
+    #Inicializador de Campo e de Lista Combinados:
+    Crie uma classe Retangulo com atributos largura e altura. Use um inicializador de campo para garantir que esses valores sejam positivos e um inicializador de lista para calcular a área.
+
+    #Inicializador de Campo com Lógica Complexa:
+    Implemente uma classe Data que representa uma data com atributos dia, mês e ano. Use um inicializador de campo para garantir que a data seja válida.
+
+    #Inicializador com Exceção:
+    Crie uma classe Estoque que representa a quantidade de um item em estoque. Implemente um inicializador que lance uma exceção se a quantidade fornecida for negativa.
+
+    #Inicializador Redirecionado:
+    Defina uma classe Círculo com atributo raio. Implemente um construtor redirecionado que cria um círculo com raio 1.0 quando nenhum raio é fornecido.
+
+Herança Simples:
+
+    Herança Básica:
+    Crie uma classe base chamada Animal com um atributo nome. Em seguida, crie uma classe derivada chamada Cachorro que herda de Animal e adicione um atributo raca. Crie um objeto Cachorro e exiba o nome e a raça.
+
+    Herança com Sobrescrita:
+    Modifique a classe Animal para incluir um método fazerSom(). Sobrescreva esse método na classe Cachorro para que ele imprima "Latir" quando chamado. Crie um objeto Cachorro e chame o método fazerSom().
+
+    Herança com Construtores:
+    Crie uma classe base Veiculo com atributos marca e ano. Em seguida, crie uma classe derivada Carro que herda de Veiculo e adicione um atributo modelo. Implemente um construtor na classe Carro que aceita marca, ano e modelo. Crie um objeto Carro e exiba suas características.
+
+Herança com Polimorfismo:
+
+    Polimorfismo com Herança:
+    Crie uma classe base Forma com um método calcularArea(). Em seguida, crie classes derivadas como Circulo e Retangulo que implementem o método calcularArea(). Crie uma lista de objetos Forma, incluindo objetos das classes derivadas. Itere pela lista e chame o método calcularArea() para cada objeto, demonstrando o polimorfismo.
+
+    Herança com Classe Abstrata:
+    Defina uma classe abstrata chamada Fruta com um método abstrato sabor(). Crie classes derivadas como Banana e Morango que implementam o método sabor(). Crie objetos dessas classes e chame o método sabor().
