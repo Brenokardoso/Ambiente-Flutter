@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_final_fields, unused_field
+// ignore_for_file: prefer_final_fields, unused_field, unnecessary_brace_in_string_interps
 
 import 'dart:io';
 

@@ -1,0 +1,23 @@
+Listas e Mapas:
+    (Médio) Crie uma função que receba uma lista de palavras e retorne a palavra mais longa da lista.
+    (Médio) Implemente um programa que leia um arquivo de texto e conte a frequência de cada palavra no texto usando um dicionário.
+    (Médio) Desenvolva um programa que simule um jogo de tabuleiro onde os jogadores podem mover suas peças em um tabuleiro representado por uma lista multidimensional.
+    (Difícil) Crie uma função que receba uma lista de números e retorne uma nova lista com os números ordenados de forma decrescente.
+    (Difícil) Implemente um sistema de gerenciamento de contatos que permita adicionar, editar, excluir e listar contatos usando um dicionário como estrutura de dados.
+    (Difícil) Desenvolva um programa que simule um sistema de reserva de assentos em um teatro usando uma matriz para representar o layout dos assentos.
+
+Funções:
+    (Médio) Escreva uma função que calcule o fatorial de um número usando recursão.
+    (Médio) Crie um programa que simule uma calculadora com funções para adição, subtração, multiplicação e divisão.
+    (Médio) Implemente um sistema de gerenciamento de tarefas com funções para adicionar, listar, marcar como concluída e excluir tarefas.
+    (Difícil) Desenvolva uma calculadora científica em que as funções matemáticas avançadas, como trigonometria e logaritmos, sejam implementadas como funções separadas.
+    (Difícil) Crie uma função que receba uma lista de números e retorne o desvio padrão da lista.
+    (Difícil) Implemente um programa que simule um sistema de registro de transações financeiras com funções para registrar depósitos, saques e verificar o saldo.
+
+Classes e Objetos:
+    (Médio) Defina uma classe "Carro" com atributos como marca, modelo e ano. Crie objetos de carros diferentes e exiba suas informações.
+    (Médio) Crie uma classe "Conta Bancária" com métodos para depositar, sacar e verificar o saldo. Permita que os usuários criem contas e realizem operações.
+    (Médio) Desenvolva um programa que simule um sistema de registro de alunos usando classes para representar alunos, cursos e notas.
+    (Difícil) Implemente um sistema de gerenciamento de estoque de uma loja com classes para representar produtos, categorias e operações de compra e venda.
+    (Difícil) Crie um jogo de simulação de vida com classes para representar diferentes seres vivos, seu comportamento e interações em um ambiente virtual.
+    (Difícil) Desenvolva um sistema de reserva de passagens aéreas com classes para representar voos, assentos e reservas de passageiros.

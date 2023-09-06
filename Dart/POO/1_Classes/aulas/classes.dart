@@ -1,8 +1,7 @@
 // ignore_for_file: unused_import, unnecessary_new, non_constant_identifier_names, unused_local_variable
 
 import "dart:io";
-
-import "package:dart_poo/1_Classes/aulas/camiseta.dart";
+import "camiseta.dart";
 
 void main() {
   var camiseta_nike = new Camisa();
