@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import
+
 import 'dart:io';
 
 // Defina uma classe Produto com atributos nome e preço. Implemente um construtor personalizado que aceita esses dois valores e crie objetos Produto usando-o.

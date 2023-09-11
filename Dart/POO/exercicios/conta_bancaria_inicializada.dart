@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import
+
 import 'dart:io';
 
 // Crie uma classe ContaBancaria com um atributo saldo. Implemente um inicializador de campo que atribui um saldo mínimo de 0 se o saldo fornecido for negativo.

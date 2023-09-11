@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import
+
 import 'dart:io';
 
 // Defina uma classe Triangulo com atributos base e altura. Use um inicializador de lista para garantir que base e altura sejam positivos.

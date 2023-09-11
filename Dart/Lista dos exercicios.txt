@@ -1,38 +1,54 @@
-Classes e Construtores:
+Entendi, você está procurando exercícios práticos para implementar os conceitos de Polimorfismo, Agregação e Interfaces em Dart. Aqui estão alguns exercícios práticos para você codificar:
 
-Inicializadores:
+**Polimorfismo:**
 
-   
+
+ASSOCIAÇÃO
+
+Exercícios Fáceis:
+
     
 
+    Agregação Simples: Crie uma classe Departamento que tenha vários funcionários. Os funcionários devem ser objetos da classe Funcionario. Demonstre como você pode agregar funcionários em um departamento.
 
-    #Inicializador de Campo e de Lista Combinados:
-    Crie uma classe Retangulo com atributos largura e altura. Use um inicializador de campo para garantir que esses valores sejam positivos e um inicializador de lista para calcular a área.
+Exercícios Médios:
 
-    #Inicializador de Campo com Lógica Complexa:
-    Implemente uma classe Data que representa uma data com atributos dia, mês e ano. Use um inicializador de campo para garantir que a data seja válida.
+    Composição de Pedido: Crie classes Pedido e ItemPedido. Um Pedido deve ser composto por vários ItemPedido. Implemente essas classes e mostre como um pedido pode ser composto por múltiplos itens.
 
-    #Inicializador com Exceção:
-    Crie uma classe Estoque que representa a quantidade de um item em estoque. Implemente um inicializador que lance uma exceção se a quantidade fornecida for negativa.
+    Associação Bidirecional: Crie duas classes, Aluno e Professor, onde um aluno pode estar associado a vários professores e um professor pode estar associado a vários alunos. Mostre como você pode estabelecer uma associação bidirecional entre essas classes.
 
-    #Inicializador Redirecionado:
-    Defina uma classe Círculo com atributo raio. Implemente um construtor redirecionado que cria um círculo com raio 1.0 quando nenhum raio é fornecido.
+    Composição de Blog: Crie classes Blog e Post. Um blog pode ter vários posts. Cada post deve estar associado ao blog ao qual pertence. Implemente essa relação de composição entre blogs e posts.
 
-Herança Simples:
+    Associação Muitos-para-Muitos: Crie duas classes, Estudante e Disciplina, onde um estudante pode estar associado a várias disciplinas e uma disciplina pode ter vários estudantes. Implemente essa associação muitos-para-muitos entre essas classes.
 
-    Herança Básica:
-    Crie uma classe base chamada Animal com um atributo nome. Em seguida, crie uma classe derivada chamada Cachorro que herda de Animal e adicione um atributo raca. Crie um objeto Cachorro e exiba o nome e a raça.
+Exercícios Difíceis:
 
-    Herança com Sobrescrita:
-    Modifique a classe Animal para incluir um método fazerSom(). Sobrescreva esse método na classe Cachorro para que ele imprima "Latir" quando chamado. Crie um objeto Cachorro e chame o método fazerSom().
+    Composição Complexa: Crie um sistema de gerenciamento de biblioteca em Dart. Você deve ter classes para representar livros, autores, bibliotecas e empréstimos de livros. Implemente a composição e agregação necessárias para criar esse sistema.
 
-    Herança com Construtores:
-    Crie uma classe base Veiculo com atributos marca e ano. Em seguida, crie uma classe derivada Carro que herda de Veiculo e adicione um atributo modelo. Implemente um construtor na classe Carro que aceita marca, ano e modelo. Crie um objeto Carro e exiba suas características.
+    Associação Polimórfica: Crie uma hierarquia de classes representando diferentes tipos de veículos, como carros, bicicletas e motos. Em seguida, crie uma classe Garagem que pode abrigar qualquer tipo de veículo. Demonstre como você pode associar veículos diferentes a uma garagem usando associação polimórfica.
 
-Herança com Polimorfismo:
+    Composição de Jogo: Crie classes para representar um jogo de RPG, com personagens, itens e inventários. Mostre como você pode compor personagens com itens e inventários de forma complexa.
 
-    Polimorfismo com Herança:
-    Crie uma classe base Forma com um método calcularArea(). Em seguida, crie classes derivadas como Circulo e Retangulo que implementem o método calcularArea(). Crie uma lista de objetos Forma, incluindo objetos das classes derivadas. Itere pela lista e chame o método calcularArea() para cada objeto, demonstrando o polimorfismo.
+    Associação Recursiva: Crie uma classe Categoria que pode ter várias subcategorias, e cada subcategoria também pode ter subcategorias, formando uma estrutura hierárquica. Demonstre como você pode representar essa associação recursiva em Dart.
 
-    Herança com Classe Abstrata:
-    Defina uma classe abstrata chamada Fruta com um método abstrato sabor(). Crie classes derivadas como Banana e Morango que implementam o método sabor(). Crie objetos dessas classes e chame o método sabor().
+Certifique-se de implementar esses exercícios e testá-los para entender melhor os conceitos de associação, composição e agregação em Dart.
+
+**Interfaces:**
+
+*Fáceis:*
+
+1. Crie uma interface `Eletrodomestico` com métodos como `ligar()`, `desligar()`, e `ajustarTemperatura()`. Implemente essa interface em classes como `Geladeira` e `ArCondicionado`.
+
+2. Implemente uma interface `FormaGeometrica` com métodos para calcular área e perímetro. Crie classes como `Circulo` e `Retangulo` que implementem essa interface.
+
+*Médias:*
+
+3. Crie uma interface `Animal` com métodos `fazerBarulho()` e `mover()`. Implemente essa interface em classes como `Cachorro`, `Gato` e `Pato`.
+
+4. Desenvolva um sistema de registro de eventos. Crie uma interface `Registravel` com um método `registrar()`. Implemente essa interface em classes como `LogDeErro` e `LogDeAcesso`.
+
+*Difíceis:*
+
+5. Implemente um sistema de pagamento online. Crie uma interface `MeioDePagamento` com métodos como `efetuarPagamento()` e `cancelarPagamento()`. Implemente essa interface em classes como `CartaoDeCredito` e `PayPal`.
+
+6. Desenvolva um sistema de plugins para uma aplicação. Crie uma interface `Plugin` com métodos para inicialização e execução. Implemente essa interface em diferentes classes de plugins.

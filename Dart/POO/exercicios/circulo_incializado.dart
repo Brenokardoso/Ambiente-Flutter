@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import, unused_local_variable
+
 import "dart:io";
 
 // Defina uma classe Círculo com atributos raio e centro, onde centro é um objeto Ponto. Use um inicializador de lista para configurar esses atributos
