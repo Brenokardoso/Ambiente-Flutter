@@ -43,4 +43,5 @@ void main() {
   curso.adicionaAluno("Breno", 21, "computacao"); // Adicione um aluno ao curso
   curso.mostraAlunos();
   print(curso.alunos_matriculados.runtimeType);
+
 }
