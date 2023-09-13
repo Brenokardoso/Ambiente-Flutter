@@ -11,7 +11,7 @@ class Departamento {
   int piso;
   List<Funcionarios> funcionarios = []; // Lista de funcionários
 
-  Departamento(String name_of_departament, int level)
+  Departamento.esseMetodo(String name_of_departament, int level)
       : nome_do_departamento = name_of_departament,
         piso = level;
 
@@ -23,7 +23,7 @@ class Departamento {
 }
 
 void main() {
-  var departamento = Departamento("RH", 3);
+  var departamento = Departamento.esseMetodo("RH", 3);
   departamento.adicionaFuncionario("Alice", "Gerente", 6000.0);
   departamento.adicionaFuncionario("Bob", "Analista", 4000.0);
 
