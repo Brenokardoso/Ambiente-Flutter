@@ -1,12 +1,13 @@
 // ignore_for_file: unused_import
 
 import "dart:async";
+import "dart:html";
 import "dart:io";
 
 void main() {
   print("Inicio Main");
   scheduleMicrotask(() => print("Microtask1"));
-  print(DateTime.now());
+  
   Future.delayed(Duration(seconds: 2), () {
     print(DateTime.now());
     print("Future delayed1");
