@@ -1,0 +1,48 @@
+Exercícios de async em Dart
+
+Fácil
+
+    Exercicio 1: Crie uma função getNumber() que retorna um Future com um número aleatório entre 1 e 10. ok
+    Exercicio 2: Crie uma função printNumber() que recebe um Future com um número e imprime o número na tela. ok
+    Exercicio 3: Crie um main() que chama a função getNumber() e, em seguida, usa a função printNumber() para imprimir o número retornado. ok
+    Exercicio 4: Crie uma função sum() que recebe dois Futures com números e retorna um Future com a soma dos números. ok
+    Exercicio 5: Crie um main() que chama a função getNumber() duas vezes e, em seguida, usa a função sum() para calcular a soma dos dois números retornados.ok
+    Exercicio 6: Crie uma função printNumbers() que recebe um Iterable de Futures com números e imprime os números na tela.
+
+Explicação:
+
+    async e await são palavras-chave que permitem a programação assíncrona em Dart.
+    Future é um tipo de valor que representa um resultado assíncrono.
+    forEach() é um método que pode ser usado para iterar sobre um Iterable de Futures.
+
+Médio
+
+    Exercicio 7: Crie uma função downloadFile() que baixa um arquivo da Internet e retorna um Future com o conteúdo do arquivo.
+    Exercicio 8: Crie um main() que chama a função downloadFile() e, em seguida, usa a função print() para imprimir o conteúdo do arquivo baixado.
+    Exercicio 9: Crie uma função callApi() que faz uma chamada a uma API e retorna um Future com a resposta da API.
+    Exercicio 10: Crie um main() que chama a função callApi() e, em seguida, usa a função print() para imprimir a resposta da API.
+    Exercicio 11: Crie uma função processData() que processa um conjunto de dados assíncronamente e retorna um Future com o resultado do processamento.
+    Exercicio 12: Crie um main() que chama a função processData() e, em seguida, usa a função print() para imprimir o resultado do processamento.
+
+Explicação:
+
+    downloadFile() é um exemplo de uma função assíncrona que retorna um Future com um resultado.
+    callApi() é um exemplo de uma função assíncrona que retorna um Future com um objeto JSON.
+    processData() é um exemplo de uma função assíncrona que pode ser usada para processar um conjunto de dados de forma assíncrona.
+
+Difícil
+
+    Exercicio 13: Crie uma função runInBackground() que executa uma função assíncrona em segundo plano.
+    Exercicio 14: Crie um main() que chama a função runInBackground() para executar uma função assíncrona que baixa um arquivo da Internet.
+    Exercicio 15: Crie uma função listen() que escuta os eventos de um Stream assíncrono.
+    Exercicio 16: Crie um main() que chama a função listen() para escutar os eventos de um Stream que emite números aleatórios.
+    Exercicio 17: Crie uma função debounce() que reduz o número de vezes que uma função assíncrona é executada.
+    Exercicio 18: Crie um main() que chama a função debounce() para limitar o número de vezes que uma função assíncrona é executada para atualizar a posição de um elemento na tela.
+
+Explicação:
+
+    runInBackground() é uma função que pode ser usada para executar uma função assíncrona em segundo plano, de forma que não bloqueie a UI.
+    listen() é uma função que pode ser usada para escutar os eventos de um Stream assíncrono.
+    debounce() é uma função que pode ser usada para reduzir o número de vezes que uma função assíncrona é executada.
+
+Espero que esses exercícios sejam úteis para você. Boa sorte no aprendizado de async em Dart!

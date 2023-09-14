@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import, invalid_return_type_for_catch_error
+
 import "dart:io";
 
 Future<String> retornaString1() async {

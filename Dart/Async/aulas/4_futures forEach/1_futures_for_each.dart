@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import, unused_local_variable
+
 import 'dart:io';
 
 Future<String> funcaoSaudacao(String nome) {
