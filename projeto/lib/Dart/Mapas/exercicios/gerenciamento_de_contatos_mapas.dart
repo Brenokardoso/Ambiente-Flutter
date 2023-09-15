@@ -17,6 +17,7 @@ adcionarContato(Map<String, Map<dynamic, dynamic>> agendaDeContatos) {
     "email": email,
     "endereço": endereco
   };
+  
 }
 
 removerContato(Map<String, Map<dynamic, dynamic>> agendaDeContatos) {

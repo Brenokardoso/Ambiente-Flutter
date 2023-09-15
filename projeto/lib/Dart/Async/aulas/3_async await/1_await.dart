@@ -35,6 +35,7 @@ Future<void> main() async {
     print("Incio de P1");
     await retornaString2().catchError((value) => print(value));
     print("Fim de P1");
+    await retornaString1().whenComplete(() => print("Está completo"));
   } on Exception catch (error) {
     print("Não foi possível realizar esta ação por $error");
   }

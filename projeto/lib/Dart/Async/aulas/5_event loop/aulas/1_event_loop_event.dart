@@ -1,7 +1,7 @@
 // ignore_for_file: unused_import
 
 import "dart:async";
-import "dart:html";
+// import "dart:html";
 import "dart:io";
 
 void main() {
@@ -10,7 +10,7 @@ void main() {
   
   Future.delayed(Duration(seconds: 2), () {
     print(DateTime.now());
-    print("Future delayed1");
+    print("Future delayed1"); 
   });
   Future(() => print("Future delayed 2"));
   Future(() => print("Future delayed 3"));
