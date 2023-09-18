@@ -1,28 +1,20 @@
-// ignore_for_file: unused_local_variable
-
-import 'dart:convert' as convert;
-import 'package:http/http.dart' as http;
-import 'package:projeto/Dart/Async/aulas/7_modelos/aulas/cidade_modelo.dart';
 // ignore_for_file: file_names
+import 'package:http/http.dart' as http;
+import 'dart:convert';
+
+import 'package:projeto/Dart/Async/aulas/7_modelos/aulas/cidade.dart';
 
 Future<void> buscaCep() async {
-  // receba sua requisição Http
-  var uri = "https://viacep.com.br/ws/01001000/json/";
-
-  // Transforme o link da sua requisção em URI(URL + URN)
-  // o mesmo vira uma HttpClienteResponse
-  // ela tem os métodos de StatusCode,Body e Headers
+  var uri = 'https://viacep.com.br/ws/01001000/json/';
   var response = await http.get(Uri.parse(uri));
-  var status = response.statusCode;
-  var body = response.body;
-
-  // Trabalhe com a sua requição e o tipo de retorno desejado
-  if (response.statusCode == 200) {
-    var cidade = Cidade.fromJson(body);
+  var responseInJson = jsonDecode(response.body);
+  if (response.statusCode >= 200 && response.statusCode <= 300) {
+    var cidade = Cidade.fromJson(response.body);
     print(cidade);
+    
   }
 }
 
-void main() {
-  buscaCep();
+Future<void> main() async {
+  await buscaCep();
 }

@@ -3,7 +3,8 @@ import 'dart:io';
 Future<void> LearArquivo(String path) async {
   try {
     final arquivo = File(path);
-    final conteudo = await arquivo.readAsLines();
+    // final conteudo = await arquivo.readAsLines();
+    final conteudo = await arquivo.readAsLinesSync();
     for (var linhas in conteudo) {
       print(linhas);
       var celula = linhas.split(' ');
@@ -17,6 +18,6 @@ Future<void> LearArquivo(String path) async {
 }
 
 void main() {
-  const String caminho = ("Dart/Lista dos exercicios.txt");
+  const String caminho = ("projeto/lib/Dart/Lista dos exercicios.txt");
   LearArquivo(caminho);
 }
