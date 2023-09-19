@@ -1,0 +1,27 @@
+{
+    "nome" : "Breno Kardoso",
+    "idade" : 21,
+    "nome cursos" : ["curso1","curso2"],
+    "cursos" : [
+        {
+            "id" : 1,
+            "nome" : "Academia do fluter",
+            "isALuno" : true
+        },
+        {
+            "id" : 2,
+            "nome" : "Imersão dart",
+            "isAluno" : false
+        }
+    ],
+    "telefone" : {
+        "ddd" : 63,
+        "numero" : 12345678910
+    },
+    "endereço" : {
+        "rua" : "Rua X",
+        "numero" : 200,
+        "cep" : 77015642
+    }
+
+}

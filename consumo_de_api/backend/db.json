@@ -1,0 +1,58 @@
+{
+    "alunos" : [
+        {
+            "id" : "1",
+            "nome" : "Breno Kardoso",
+            "idade" : 21,
+            "nome cursos" : ["Academia do Flutter", "Imersão Dart"],
+            "cursos" : [
+                {
+                    "id" : 1,
+                    "nome" : "Academia do Flutter",
+                    "isAluno" : true
+                },
+                {
+                    "id" : 2,
+                    "nome" : "Imersão Dart",
+                    "isAluno" : false
+                }
+            ],
+            "telefone" : {
+                "ddd" : 63,
+                "numero" : 12345678910
+            },
+            "endereço" : {
+                "rua" : "Rua X",
+                "numero" : 200,
+                "cep" : 77015642
+            }
+        },
+        {
+            "id" : "2",
+            "nome" : "Amanda Kardoso",
+            "idade" : 17,
+            "nome cursos" : ["Academia do Flutter", "Imersão Dart"],
+            "cursos" : [
+                {
+                    "id" : 1,
+                    "nome" : "Academia do Flutter",
+                    "isAluno" : true
+                },
+                {
+                    "id" : 2,
+                    "nome" : "Imersão Dart",
+                    "isAluno" : true
+                }
+            ],
+            "telefone" : {
+                "ddd" : 63,
+                "numero" : 109876654321
+            },
+            "endereço" : {
+                "rua" : "Rua Y",
+                "numero" : 2,
+                "cep" : 77022642
+            }
+        }
+    ]
+}

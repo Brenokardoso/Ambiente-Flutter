@@ -5,10 +5,10 @@ import 'dart:convert' as convert;
 
 // Recebendo uma requisição no estilo http
 Future<void> main() async {
-  // await buscaCep();
-  // await buscarPosts();
-  // await naoBuscacep();
-  // await salvaPost();
+  await buscaCep();
+  await buscarPosts();
+  await naoBuscacep();
+  await salvaPost();
   await atualizaPost();
 }
 
