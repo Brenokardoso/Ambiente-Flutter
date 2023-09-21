@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, annotate_overrides, use_key_in_widget_constructors
 
 import 'package:flutter/material.dart';
 import 'package:flutter_projeto_2/home/homePage.dart';
@@ -9,14 +9,15 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: "Flutter Demo",
-        // home: HomePage(),
-        home: Imagens());
+      title: "Debug Show Manager",
+      theme: ThemeData.dark(),
+      debugShowCheckedModeBanner: false,
+      home: Imagens(
+        key: key,
+      ),
+    );
   }
 }

@@ -1,52 +1,62 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors
 
 import 'package:flutter/material.dart';
 
 class Imagens extends StatelessWidget {
-  const Imagens({Key? key}) : super(key: key);
+  const Imagens({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Imagens'),
-        backgroundColor: Color.fromARGB(255, 232, 47, 47),
+        title: Text("App Bar"),
+        backgroundColor: Colors.green[600],
       ),
-      backgroundColor: Colors.blueGrey[200],
-      drawer: Drawer(
-        child: Text("Olá,pela barra lateral retratil"),
-      ),
-      body: Center(
-        child: Column(
-          children: [
-            Container(
-              margin: EdgeInsets.all(10),
-              width: 200,
-              height: 200,
-              color: Colors.blue[150],
-              child: Image.asset("assets/NebularDuck.png", fit: BoxFit.cover),
-            ),
-            Container(
-              width: 200,
-              height: 200,
-              color: Colors.yellowAccent[300],
+      backgroundColor: const Color.fromARGB(255, 166, 166, 166),
+      body: Column(
+        children: [
+          Container(
+              margin: EdgeInsets.all(5),
+              child: Center(
+                child: Image(
+                  image: AssetImage("assets/NebularDuck.png"),
+                  width: 300,
+                  height: 200,
+                ),
+              )),
+          Container(
+            margin: EdgeInsets.all(5),
+            child: Center(
               child: Image(
+                // image: NetworkImage(
+                // "https://s1.static.brasilescola.uol.com.br/img/2017/03/nebulosa-anel.jpg"),
                 image: NetworkImage(
-                    "https://imguol.com/c/noticias/8d/2023/08/25/nebulosa-anel-imagem-capturada-pelo-telescopio-espacial-james-webb-1692973295017_v2_900x506.jpg"),
-                fit: BoxFit.fill,
+                  "https://www.astronoo.com/images/galaxies/petit-nuage-de-magellan-hd.jpg",
+                ),
+                width: 300,
+                height: 200,
               ),
             ),
-            Container(
-              margin: EdgeInsets.all(10),
-              child: Container(
-                color: Colors.amber[300],
-                width: 200,
-                height: 200,
-                child: Icon(Icons.abc),
+          ),
+          Container(
+            width: 300,
+            height: 200,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage("assets/NebularDuck.png"),
+                fit: BoxFit.cover,
               ),
-            )
-          ],
-        ),
+            ),
+            child: Center(
+              child: Text(
+                "Olá",
+                style: TextStyle(
+                  backgroundColor: const Color.fromARGB(235, 255, 255, 255),
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
