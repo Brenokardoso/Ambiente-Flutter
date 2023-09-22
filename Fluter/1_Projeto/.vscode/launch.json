@@ -1,0 +1,91 @@
+{
+    // Use o IntelliSense para saber mais sobre os atributos possíveis.
+    // Focalizar para exibir as descrições dos atributos existentes.
+    // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
+    // Se essa merda ficar enchendo o saco dá um program : Path de onde está o arquivo main
+    "version": "0.2.0",
+    "configurations": [        
+        {
+            "name": "flutter_projeto_1",
+            "cwd": "flutter_projeto_1",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "flutter_projeto_1 (profile mode)",
+            "cwd": "flutter_projeto_1",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "flutter_projeto_1 (release mode)",
+            "cwd": "flutter_projeto_1",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "flutter_projeto_2",
+            "cwd": "flutter_projeto_2",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "flutter_projeto_2 (profile mode)",
+            "cwd": "flutter_projeto_2",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "flutter_projeto_2 (release mode)",
+            "cwd": "flutter_projeto_2",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "flutter_projeto_3",
+            "cwd": "flutter_projeto_3",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "flutter_projeto_3 (profile mode)",
+            "cwd": "flutter_projeto_3",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "flutter_projeto_3 (release mode)",
+            "cwd": "flutter_projeto_3",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "flutter_projeto_4",
+            "cwd": "flutter_projeto_4",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/NavigatorChatGPT/main.dart"
+
+        },
+        {
+            "name": "flutter_projeto_4 (profile mode)",
+            "cwd": "flutter_projeto_4",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "flutter_projeto_4 (release mode)",
+            "cwd": "flutter_projeto_4",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}

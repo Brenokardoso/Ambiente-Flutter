@@ -1,7 +1,7 @@
-// ignore_for_file: prefer_const_constructors
+  // ignore_for_file: prefer_const_constructors, annotate_overrides, use_key_in_widget_constructors
 
 import 'package:flutter/material.dart';
-import 'package:flutter_projeto_1/home/homePage.dart';
+import 'package:flutter_projeto_4/NavigatorRodrigoHamal/home.dart';
 
 void main() {
   runApp(
@@ -10,15 +10,12 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: "MyAppRoute",
       debugShowCheckedModeBanner: false,
-      title: "Flutter Demo",
-      home: HomePage(),
+      home: Home(),
     );
   }
 }
