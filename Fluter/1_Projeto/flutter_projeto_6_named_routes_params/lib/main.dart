@@ -1,8 +1,9 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers, sized_box_for_whitespace
 
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_projeto_6_named_routes_params/lista.dart';
 
 void main() {
   runApp(
@@ -22,6 +23,8 @@ class MyApp extends StatelessWidget {
         "/": (_) => HomePage(),
         "/Page1": (_) => Page1(),
         "/Page2": (_) => Page2(),
+        "/Page3": (_) => Page3(),
+        "/Lista": (_) => Lista(),
       },
     );
   }
@@ -49,10 +52,33 @@ class HomePage extends StatelessWidget {
                 onPressed: () {
                   Navigator.of(context).pushNamed("/Page1");
                 },
-                child: Text("OK"),
+                child: Text("Ir para página 1"),
               ),
             ),
           ),
+          Container(
+            child: Center(
+              child: Container(
+                width: 125,
+                height: 125,
+                color: Colors.teal[600],
+                child: ElevatedButton(
+                  onPressed: () {
+                    return Navigator.of(context).pop();
+                  },
+                  child: Text("Sair do app"),
+                ),
+              ),
+            ),
+          ),
+          Container(
+            width: 125,
+            height: 125,
+            child: ElevatedButton(
+              onPressed: () => Navigator.of(context).pushNamed("/Lista"),
+              child: Text("Lista"),
+            ),
+          )
         ],
       ),
     );
@@ -79,7 +105,7 @@ class Page1 extends StatelessWidget {
               color: Colors.green[400],
               child: ElevatedButton(
                 onPressed: () => Navigator.of(context).pushNamed("/Page2"),
-                child: Text("Only Normal Button"),
+                child: Text("Ir para Página2"),
               ),
             ),
           ],
@@ -108,10 +134,19 @@ class Page2 extends StatelessWidget {
               height: 125,
               color: Color.fromARGB(255, 194, 20, 20),
               child: ElevatedButton(
-                onPressed: () => Navigator.of(context).pop(),
-                child: Text("Only Normal Button 2"),
+                onPressed: () => Navigator.of(context).pushNamed("/Page3"),
+                child: Text("Ir para página 3"),
               ),
             ),
+            Container(
+              width: 125,
+              height: 125,
+              color: Color.fromARGB(255, 104, 201, 47),
+              child: ElevatedButton(
+                onPressed: () => Navigator.of(context).pop(),
+                child: Text("Voltar para Pagina 2"),
+              ),
+            )
           ],
         ),
       ),
@@ -128,22 +163,35 @@ class Page3 extends StatelessWidget {
         title: Text("Tela3"),
         backgroundColor: Colors.yellow[600],
       ),
-      body: Container(
-        child: Container(
-          width: 100,
-          height: 100,
-          color: Colors.red[500],
-          child: ElevatedButton(
-            onPressed: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (_) => Page1(),
-                ),
-              );
-            },
-            child: Text("New Button"),
+      body: Column(
+        children: [
+          Container(
+            width: 100,
+            height: 100,
+            color: Colors.red[500],
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => Page1(),
+                  ),
+                );
+              },
+              child: Text("Ir para página 1"),
+            ),
           ),
-        ),
+          Container(
+            width: 125,
+            height: 125,
+            color: Colors.orangeAccent[600],
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: Text("Voltar para a Pagina 2"),
+            ),
+          ),
+        ],
       ),
     );
   }

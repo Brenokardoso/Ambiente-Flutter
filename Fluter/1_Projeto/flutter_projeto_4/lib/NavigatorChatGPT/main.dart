@@ -69,7 +69,7 @@ class Tela1 extends StatelessWidget {
                       settings: RouteSettings(name: "Tela2"),
                       builder: (BuildContext context) {
                         return Tela2(
-                          data: "Esta é uma sisntese de texto",
+                          data: "Esta é uma sintese de texto",
                         );
                       },
                     ),
