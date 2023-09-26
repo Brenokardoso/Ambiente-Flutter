@@ -1,5 +1,6 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers, unnecessary_this, prefer_typing_uninitialized_variables, must_be_immutable
 import 'package:flutter/material.dart';
+import 'exemplo.dart';
 
 void main() {
   runApp(
@@ -25,33 +26,16 @@ class MyApp extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Center(
-                child: Exemplo(),
+                child: Exemplo(
+                  title: "Esta é uma sintese de args",
+                  onPressed: () {
+                    Text("Clicou no botão");
+                  },
+                ),
               ),
             ],
           ),
         ),
-      ),
-    );
-  }
-}
-
-class Exemplo extends StatelessWidget {
-  const Exemplo({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: 100,
-      height: 100,
-      color: Colors.red[600],
-      child: Column(
-        children: [
-          Text("Texto de Exemplo"),
-          OutlinedButton(
-            onPressed: () {},
-            child: Text("Botão"),
-          ),
-        ],
       ),
     );
   }
