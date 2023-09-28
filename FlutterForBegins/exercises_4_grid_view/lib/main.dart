@@ -39,6 +39,7 @@ class HomePage extends StatelessWidget {
           ),
           Container(
             color: Colors.blue,
+            
           ),
           Container(
             color: Colors.green,
