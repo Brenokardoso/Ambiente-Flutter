@@ -1,0 +1,69 @@
+{
+    // Use o IntelliSense para saber mais sobre os atributos possíveis.
+    // Focalizar para exibir as descrições dos atributos existentes.
+    // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
+    // Começa na aula 149 do curso -> Academia Do Flutter
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "a1_parametros_das_rotas",
+            "cwd": "a1_parametros_das_rotas",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "a1_parametros_das_rotas (profile mode)",
+            "cwd": "a1_parametros_das_rotas",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "a1_parametros_das_rotas (release mode)",
+            "cwd": "a1_parametros_das_rotas",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "a2_custom_navigate",
+            "cwd": "a2_custom_navigate",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "a2_custom_navigate (profile mode)",
+            "cwd": "a2_custom_navigate",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "a2_custom_navigate (release mode)",
+            "cwd": "a2_custom_navigate",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "a3_pop_up_menu_buttom",
+            "cwd": "a3_pop_up_menu_buttom",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "a3_pop_up_menu_buttom (profile mode)",
+            "cwd": "a3_pop_up_menu_buttom",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "a3_pop_up_menu_buttom (release mode)",
+            "cwd": "a3_pop_up_menu_buttom",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}
