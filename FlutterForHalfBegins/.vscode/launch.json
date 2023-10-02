@@ -5,6 +5,8 @@
     // Começa na aula 149 do curso -> Academia Do Flutter
     "version": "0.2.0",
     "configurations": [
+        
+    
         {
             "name": "a1_parametros_das_rotas",
             "cwd": "a1_parametros_das_rotas",

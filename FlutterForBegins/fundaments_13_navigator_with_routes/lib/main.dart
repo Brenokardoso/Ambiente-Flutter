@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, must_be_immutable, non_constant_identifier_names
 
 import 'package:flutter/material.dart';
 import 'package:fundaments_13_navigator_with_routes/src/page1.dart';
@@ -67,7 +67,7 @@ class HomePage extends StatelessWidget {
                 ),
                 ElevatedButton(
                   child: Text("Go to Page 2"),
-                  onPressed: () => Navigator.of(context).pushNamed("/Page2"),
+                  onPressed: () => Navigator.of(context).pushNamed("/Page2",arguments: null),
                 ),
               ],
             ),
