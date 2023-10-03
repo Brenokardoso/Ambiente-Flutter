@@ -1,0 +1,42 @@
+[
+    {
+        "cidade": "Palmas",
+        "UF": "TO"
+    },
+    {
+        "cidade": "Araguaína",
+        "UF": "TO"
+    },
+    {
+        "cidade": "Gurupi",
+        "UF": "TO"
+    },
+    {
+        "cidade": "Porto Nacional",
+        "UF": "TO"
+    },
+    {
+        "cidade": "Paraíso do Tocantins",
+        "UF": "TO"
+    },
+    {
+        "cidade": "Brasília",
+        "UF": "DF"
+    },
+    {
+        "cidade": "São Paulo",
+        "UF": "SP"
+    },
+    {
+        "cidade": "Rio de Janeiro",
+        "UF": "RJ"
+    },
+    {
+        "cidade": "Belém",
+        "UF": "PA"
+    },
+    {
+        "cidade": "Fortaleza",
+        "UF": "CE"
+    }
+]
