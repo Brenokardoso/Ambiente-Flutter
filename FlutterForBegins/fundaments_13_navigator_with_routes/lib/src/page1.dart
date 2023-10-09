@@ -1,6 +1,4 @@
-// ignore_for_file: prefer_const_constructors
-
-import 'dart:js';
+// ignore_for_file: prefer_const_constructors, unused_import
 
 import 'package:flutter/material.dart';
 import 'package:fundaments_13_navigator_with_routes/main.dart';
