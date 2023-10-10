@@ -65,6 +65,11 @@ class _FormularioState extends State<Formulario> {
                 height: 10,
               ),
               ElevatedButton(
+                  style: ButtonStyle(
+                      backgroundColor:
+                          MaterialStateProperty.all<Color>(Colors.white38),
+                      fixedSize:
+                          MaterialStateProperty.all<Size>(Size(100, 40))),
                   onPressed: () {
                     formKey.currentState!.validate();
                     if (formKey.currentState!.validate() == true) {
@@ -76,7 +81,7 @@ class _FormularioState extends State<Formulario> {
                         ),
                       );
                       Future<void>(
-                        () {
+                        () { 
                           Duration(seconds: 5);
                           Navigator.of(context).pushNamed("/tela1");
                         },
@@ -85,7 +90,10 @@ class _FormularioState extends State<Formulario> {
                       print("Não validado");
                     }
                   },
-                  child: Text("Enviar")),
+                  child: Text(
+                    "Entrar",
+                    style: TextStyle(color: Colors.black),
+                  )),
             ],
           ),
         ),
