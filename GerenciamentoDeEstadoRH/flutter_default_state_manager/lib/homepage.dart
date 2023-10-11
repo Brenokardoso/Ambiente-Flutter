@@ -8,7 +8,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey,
+      backgroundColor: Color.fromARGB(255, 146, 192, 216),
       appBar: AppBar(
         title: Text("AppBar"),
       ),
@@ -22,12 +22,23 @@ class HomePage extends StatelessWidget {
                 },
                 child: Text("SetState")),
             SizedBox(height: 20),
-            ElevatedButton(onPressed: () {}, child: Text("Value Nofier")),
-            SizedBox(height: 20),
-            ElevatedButton(onPressed: () {}, child: Text("Change Notifier")),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamed("/notifier");
+                },
+                child: Text("Value Nofier")),
             SizedBox(height: 20),
             ElevatedButton(
-                onPressed: () {}, child: Text("Bloc Pater (Streams)")),
+                onPressed: () {
+                  Navigator.of(context).pushNamed("/change");
+                },
+                child: Text("Change Notifier")),
+            SizedBox(height: 20),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamed("/block");
+                },
+                child: Text("Bloc Pater (Streams)")),
           ],
         ),
       ),
