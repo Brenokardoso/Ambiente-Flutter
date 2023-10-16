@@ -1,30 +1,35 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, unused_field, file_names, unused_import
+// ignore_for_file: prefer_const_constructors, unused_local_variable
 
 import 'dart:math';
 
 import 'package:currency_text_input_formatter/currency_text_input_formatter.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_default_state_manager/changeNotifier/changeNofierController.dart';
-import 'package:flutter_default_state_manager/widgets/imc_gauge_arvore.dart';
-import 'package:flutter_default_state_manager/widgets/imc_gauge_range.dart';
+import 'package:flutter_default_state_manager/widgets/formulario.dart';
 import 'package:intl/intl.dart';
-import 'package:syncfusion_flutter_gauges/gauges.dart';
 
-class FinalChangeNotifier extends StatefulWidget {
-  const FinalChangeNotifier({super.key});
+class Changesnotiders extends StatefulWidget {
+  const Changesnotiders({super.key});
 
   @override
-  State<FinalChangeNotifier> createState() => _FinalChangeNotifier();
+  State<Changesnotiders> createState() => _ChangesnotidersState();
 }
 
-class _FinalChangeNotifier extends State<FinalChangeNotifier> {
-  final controller = ImcChageNotifierController();
+class _ChangesnotidersState extends State<Changesnotiders> {
   final _pesoController = TextEditingController();
   final _alturaController = TextEditingController();
-  var imc = ValueNotifier(0.0);
-  var pesoTeste = 0.0;
-  var alturaTeste = 0.0;
+  var imc = 0.0;
   var formKey = GlobalKey<FormState>();
+
+  Future<void> calculaIMC(
+      {required double peso, required double altura}) async {
+    setState(() {
+      imc = 0.0;
+    });
+    await Future.delayed(Duration(seconds: 1, milliseconds: 500));
+    setState(() {
+      imc = peso / pow(altura, 2);
+    });
+  }
 
   @override
   void dispose() {
@@ -38,7 +43,7 @@ class _FinalChangeNotifier extends State<FinalChangeNotifier> {
     return Scaffold(
       backgroundColor: Colors.blueGrey,
       appBar: AppBar(
-        title: Text("ChangeNotifier"),
+        title: Text("Imc"),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -47,11 +52,7 @@ class _FinalChangeNotifier extends State<FinalChangeNotifier> {
             key: formKey,
             child: Column(
               children: [
-                AnimatedBuilder(
-                    animation: controller,
-                    builder: (context, child) {
-                      return RadialFormsGauge(imc: controller.imc);
-                    }),
+                RadialFormsGauge(imc: imc),
                 SizedBox(height: 15),
                 TextFormField(
                   controller: _pesoController,
@@ -100,7 +101,8 @@ class _FinalChangeNotifier extends State<FinalChangeNotifier> {
                             formatter.parse(_pesoController.text) as double;
                         var altura = formatter
                             .parse(_alturaController.text.toString()) as double;
-                        controller.calcularImc(peso: peso, altura: altura);
+
+                        calculaIMC(peso: peso, altura: altura);
                       } else {}
                     },
                     child: Text("Calcular Imc"))

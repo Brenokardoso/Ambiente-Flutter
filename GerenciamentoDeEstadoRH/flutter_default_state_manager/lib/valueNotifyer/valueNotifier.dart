@@ -1,43 +1,37 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, unused_field, file_names, unused_import
+// ignore_for_file: prefer_const_constructors, non_constant_identifier_names, use_key_in_widget_constructors, must_be_immutable
 
+import 'dart:ffi';
 import 'dart:math';
 
 import 'package:currency_text_input_formatter/currency_text_input_formatter.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_default_state_manager/widgets/imc_gauge_arvore.dart';
+import 'package:flutter_default_state_manager/widgets/formulario.dart';
 import 'package:flutter_default_state_manager/widgets/imc_gauge_range.dart';
 import 'package:intl/intl.dart';
 import 'package:syncfusion_flutter_gauges/gauges.dart';
 
-class ChangersNotifiers extends StatefulWidget {
-  const ChangersNotifiers({super.key});
+class ValuesNotifyer extends StatefulWidget {
+  final double imc;
+  ValuesNotifyer({Key? key, required this.imc});
 
   @override
-  State<ChangersNotifiers> createState() => _ChangersNotifiersState();
+  State<ValuesNotifyer> createState() => _VauesNofityState();
 }
 
-class _ChangersNotifiersState extends State<ChangersNotifiers> {
-  final _pesoController = TextEditingController();
-  final _alturaController = TextEditingController();
+class _VauesNofityState extends State<ValuesNotifyer> {
   var imc = ValueNotifier(0.0);
-  var pesoTeste = 0.0;
-  var alturaTeste = 0.0;
+
+  final _pesoController = TextEditingController();
+
+  final _alturaController = TextEditingController();
+
   var formKey = GlobalKey<FormState>();
 
   Future<void> calculaIMC(
       {required double peso, required double altura}) async {
     imc.value = 0.0;
-    await Future.delayed(Duration(seconds: 2, microseconds: 500));
-    setState(() {
-      imc.value = peso / pow(altura, 2);
-    });
-  }
-
-  @override
-  void dispose() {
-    _alturaController.dispose();
-    _pesoController.dispose();
-    super.dispose();
+    await Future.delayed(Duration(seconds: 2));
+    imc.value = peso / pow(altura, 2);
   }
 
   @override
@@ -45,7 +39,7 @@ class _ChangersNotifiersState extends State<ChangersNotifiers> {
     return Scaffold(
       backgroundColor: Colors.blueGrey,
       appBar: AppBar(
-        title: Text("ValueNotifier"),
+        title: Text("ValueNotifer"),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -54,11 +48,12 @@ class _ChangersNotifiersState extends State<ChangersNotifiers> {
             key: formKey,
             child: Column(
               children: [
-                ValueListenableBuilder(
-                    valueListenable: imc,
-                    builder: (context, imcValue, _) {
-                      return RadialFormsGauge(imc: imcValue);
-                    }),
+                ValueListenableBuilder<double>(
+                  valueListenable: imc,
+                  builder: (_, values, __) {
+                    return RadialFormsGauge(imc: values);
+                  },
+                ),
                 SizedBox(height: 15),
                 TextFormField(
                   controller: _pesoController,

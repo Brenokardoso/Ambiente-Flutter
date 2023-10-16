@@ -1,8 +1,9 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, unused_import
 
+import 'package:exercicios/src/pages/%20value_notifer.dart';
 import 'package:exercicios/src/pages/change_notfier.dart';
+import 'package:exercicios/src/pages/change_notifier_dois.dart';
 import 'package:exercicios/src/pages/set_state.dart';
-import 'package:exercicios/src/pages/valuer_notifier.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -37,16 +38,23 @@ class _HomePageState extends State<HomePage> {
             ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => ValuesNotifers()));
+                      builder: (context) => ValuesNofieres()));
                 },
                 child: Text("ValueNotifier")),
             SizedBox(height: 15),
             ElevatedButton(
                 onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => TaskListScreen()));
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => (Tarefa())));
                 },
                 child: Text("ChangeNotifier")),
+            SizedBox(height: 15),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => (ChangesTwo())));
+                },
+                child: Text("Change Notifier Two")),
             SizedBox(height: 15),
             ElevatedButton(onPressed: () {}, child: Text("StateManagement")),
           ],

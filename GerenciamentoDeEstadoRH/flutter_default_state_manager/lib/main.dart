@@ -25,8 +25,8 @@ class _ManagerState extends State<ManagerState> {
       routes: {
         "/": (_) => HomePage(),
         "/imc": (context) => Imc(),
-        "/notifier": (_) => ChangersNotifiers(),
-        "/change": (conetex) => FinalChangeNotifier(),
+        "/notifier": (_) => ValuesNotifyer(imc: 0.0),
+        "/change": (conetex) => Changesnotiders(),
         "/block": (conetext) => BlocPartterImc(),
       },
       initialRoute: "/",

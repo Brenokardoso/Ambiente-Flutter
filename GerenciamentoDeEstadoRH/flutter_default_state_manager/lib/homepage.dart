@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, avoid_returning_null_for_void
 
 import 'package:flutter/material.dart';
+import 'package:flutter_default_state_manager/setState/imc.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -8,7 +9,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 146, 192, 216),
+      backgroundColor: Color.fromARGB(255, 140, 167, 182),
       appBar: AppBar(
         title: Text("AppBar"),
       ),
@@ -26,7 +27,7 @@ class HomePage extends StatelessWidget {
                 onPressed: () {
                   Navigator.of(context).pushNamed("/notifier");
                 },
-                child: Text("Value Nofier")),
+                child: Text("ValuesNotifers")),
             SizedBox(height: 20),
             ElevatedButton(
                 onPressed: () {
