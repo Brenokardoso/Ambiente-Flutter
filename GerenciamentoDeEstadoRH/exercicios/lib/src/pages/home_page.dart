@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, unused_import
 
 import 'package:exercicios/src/pages/%20value_notifer.dart';
+import 'package:exercicios/src/pages/acc_light_block_partter.dart';
+import 'package:exercicios/src/pages/block_partterner.dart';
 import 'package:exercicios/src/pages/change_notfier.dart';
 import 'package:exercicios/src/pages/change_notifier_dois.dart';
 import 'package:exercicios/src/pages/set_state.dart';
@@ -57,6 +59,16 @@ class _HomePageState extends State<HomePage> {
                 child: Text("Change Notifier Two")),
             SizedBox(height: 15),
             ElevatedButton(onPressed: () {}, child: Text("StateManagement")),
+            SizedBox(height: 15),
+            ElevatedButton(
+                onPressed: () => Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (_) => BlocDemo())),
+                child: Text("BLockParterner")),
+            SizedBox(height: 15),
+            ElevatedButton(
+                onPressed: () => Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (_) => LightTurnOnOff())),
+                child: Text("Light Partterner"))
           ],
         ),
       ),

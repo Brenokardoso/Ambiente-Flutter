@@ -1,7 +1,8 @@
 // ignore_for_file: prefer_const_constructors, library_private_types_in_public_api, use_key_in_widget_constructors, unused_import
 
 import 'package:flutter/material.dart';
-import 'package:flutter_default_state_manager/blocpartterner/blockpartter_page.dart';
+
+import 'package:flutter_default_state_manager/blocpartterner/imc_block_partter.dart';
 import 'package:flutter_default_state_manager/changeNotifier/changeNotifier.dart';
 import 'package:flutter_default_state_manager/homepage.dart';
 import 'package:flutter_default_state_manager/setState/imc.dart';
@@ -26,8 +27,8 @@ class _ManagerState extends State<ManagerState> {
         "/": (_) => HomePage(),
         "/imc": (context) => Imc(),
         "/notifier": (_) => ValuesNotifyer(imc: 0.0),
-        "/change": (conetex) => Changesnotiders(),
-        "/block": (conetext) => BlocPartterImc(),
+        "/change": (conetex) => Changes(),
+        "/block": (conetext) => ImcBlockPartterner(),
       },
       initialRoute: "/",
     );

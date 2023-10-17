@@ -1,42 +1,28 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, unused_field
-
-import 'dart:math';
+// ignore_for_file: prefer_const_constructors, unused_local_variable
 
 import 'package:currency_text_input_formatter/currency_text_input_formatter.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_default_state_manager/blocpartterner/block_controller.dart';
+import 'package:flutter_default_state_manager/blocpartterner/imc_block_partter_cotroler.dart';
 import 'package:flutter_default_state_manager/blocpartterner/imc_state.dart';
 import 'package:flutter_default_state_manager/widgets/imc_gauge_arvore.dart';
-import 'package:flutter_default_state_manager/widgets/imc_gauge_range.dart';
 import 'package:intl/intl.dart';
-import 'package:syncfusion_flutter_gauges/gauges.dart';
 
-class BlocPartterImc extends StatefulWidget {
-  const BlocPartterImc({super.key});
+class ImcBlockPartterner extends StatefulWidget {
+  const ImcBlockPartterner({super.key});
 
   @override
-  State<BlocPartterImc> createState() => _BlocPartterImc();
+  State<ImcBlockPartterner> createState() => _ImcBlockPartternerState();
 }
 
-class _BlocPartterImc extends State<BlocPartterImc> {
-  final _controller = BlockControllerImc();
+class _ImcBlockPartternerState extends State<ImcBlockPartterner> {
+  double imc = 0.0;
   final _pesoController = TextEditingController();
-  final _alturaController = TextEditingController();
-  var imc = 0.0;
-  var pesoTeste = 0.0;
-  var alturaTeste = 0.0;
-  var formKey = GlobalKey<FormState>();
 
-  Future<void> calculaIMC(
-      {required double peso, required double altura}) async {
-    setState(() {
-      imc = 0.0;
-    });
-    await Future.delayed(Duration(seconds: 1, milliseconds: 500));
-    setState(() {
-      imc = peso / pow(altura, 2);
-    });
-  }
+  final _alturaController = TextEditingController();
+
+  final _controller = ImcBlockControler();
+
+  var formKey = GlobalKey<FormState>();
 
   @override
   void dispose() {
@@ -51,7 +37,7 @@ class _BlocPartterImc extends State<BlocPartterImc> {
     return Scaffold(
       backgroundColor: Colors.blueGrey,
       appBar: AppBar(
-        title: Text("BlocPartterImc"),
+        title: Text("Block Partterner"),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -61,15 +47,10 @@ class _BlocPartterImc extends State<BlocPartterImc> {
             child: Column(
               children: [
                 StreamBuilder<ImcState>(
-                  stream: null,
-                  builder: (context, snapshot) {
-                    var imc = 0.0;
-                    if (snapshot.hasData) {
-                      imc = snapshot.data!.imc;
-                      return RadialFormsGauge(imc: imc);
-                    } else {
-                      return throw Exception("Ocoreu um erro");
-                    }
+                  stream: _controller.imcOut,
+                  builder: (ctx, snapshot) {
+                    imc = snapshot.data?.imc ?? 0;
+                    return RadialFormsGauge(imc: imc);
                   },
                 ),
                 SizedBox(height: 15),
@@ -121,10 +102,10 @@ class _BlocPartterImc extends State<BlocPartterImc> {
                         var altura = formatter
                             .parse(_alturaController.text.toString()) as double;
 
-                        calculaIMC(peso: peso, altura: altura);
+                        _controller.calcularImc(peso: peso, altura: altura);
                       } else {}
                     },
-                    child: Text("Calcular imc"))
+                    child: Text("Calcular Imc"))
               ],
             ),
           ),

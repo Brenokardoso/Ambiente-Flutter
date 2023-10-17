@@ -1,35 +1,25 @@
-// ignore_for_file: prefer_const_constructors, unused_local_variable
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, unused_field
 
 import 'dart:math';
 
 import 'package:currency_text_input_formatter/currency_text_input_formatter.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_default_state_manager/widgets/formulario.dart';
+import 'package:flutter_default_state_manager/changeNotifier/change_notfier_controller.dart';
+import 'package:flutter_default_state_manager/widgets/imc_gauge_arvore.dart';
 import 'package:intl/intl.dart';
 
-class Changesnotiders extends StatefulWidget {
-  const Changesnotiders({super.key});
+class Changes extends StatefulWidget {
+  const Changes({super.key});
 
   @override
-  State<Changesnotiders> createState() => _ChangesnotidersState();
+  State<Changes> createState() => _Changes();
 }
 
-class _ChangesnotidersState extends State<Changesnotiders> {
+class _Changes extends State<Changes> {
+  final controller = ImcChangeNotifierController();
   final _pesoController = TextEditingController();
   final _alturaController = TextEditingController();
-  var imc = 0.0;
   var formKey = GlobalKey<FormState>();
-
-  Future<void> calculaIMC(
-      {required double peso, required double altura}) async {
-    setState(() {
-      imc = 0.0;
-    });
-    await Future.delayed(Duration(seconds: 1, milliseconds: 500));
-    setState(() {
-      imc = peso / pow(altura, 2);
-    });
-  }
 
   @override
   void dispose() {
@@ -43,7 +33,7 @@ class _ChangesnotidersState extends State<Changesnotiders> {
     return Scaffold(
       backgroundColor: Colors.blueGrey,
       appBar: AppBar(
-        title: Text("Imc"),
+        title: Text("Change Notifer Page"),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -52,7 +42,10 @@ class _ChangesnotidersState extends State<Changesnotiders> {
             key: formKey,
             child: Column(
               children: [
-                RadialFormsGauge(imc: imc),
+                AnimatedBuilder(
+                  animation: controller,
+                  builder: (_, __) => RadialFormsGauge(imc: controller.imc),
+                ),
                 SizedBox(height: 15),
                 TextFormField(
                   controller: _pesoController,
@@ -102,10 +95,10 @@ class _ChangesnotidersState extends State<Changesnotiders> {
                         var altura = formatter
                             .parse(_alturaController.text.toString()) as double;
 
-                        calculaIMC(peso: peso, altura: altura);
+                        controller.calculaImc(peso: peso, altura: altura);
                       } else {}
                     },
-                    child: Text("Calcular Imc"))
+                    child: Text("Calcular Changes"))
               ],
             ),
           ),
